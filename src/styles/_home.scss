@@ -1,0 +1,14 @@
+@import "config";
+
+.home{
+  .link{
+    @media (min-width:960px) {
+      text-align: right;
+    }
+  }
+}
+.home__widget{
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color:$primary-textColor;
+}

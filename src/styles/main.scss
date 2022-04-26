@@ -1,0 +1,82 @@
+@import "config";
+@import "home";
+body{
+  background-color: $background-color;
+  font-family: 'Karla', sans-serif;;
+}
+.content{
+  display:flex;
+}
+.header{
+  background-color: $background-color;
+  padding-top: 1rem;
+  padding-botton: 1rem;
+  flex:4;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  @media (max-width:959px){
+    order:2;
+  }
+  &__input {
+    @media (min-width: 600px) {
+      width: 350px;
+    }
+  }
+}
+.primary__textColor{
+  color:$primary-textColor;
+}
+.secondary-textColor{
+  color:$secondary-textColor;
+}
+.margin__top{
+  margin-top: 2rem;
+}
+.notification__section{
+  margin-top: 1rem;
+  transition: overflow linear .2s;
+  height: 300px;
+  overflow: hidden auto;
+  //&:hover{
+  //  overflow-y: auto;
+  //  overflow-x: hidden;
+  //  transition: overflow linear .2s;
+  //}
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track{
+    background-color: #a9a9a9;
+    border-radius: 200px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-image: linear-gradient(180deg, #1C1C1F 0%, #252529 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  }
+}
+.student__queries{
+  margin-top: 1rem;
+  transition: overflow linear .2s;
+  height: 300px;
+  overflow: hidden auto;
+  //&:hover{
+  //  overflow-y: auto;
+  //  overflow-x: hidden;
+  //  transition: overflow linear .2s;
+  //}
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-track{
+    background-color: #a9a9a9;
+    border-radius: 200px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-image: linear-gradient(180deg, #1C1C1F 0%, #252529 99%);
+    box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+  }
+}
