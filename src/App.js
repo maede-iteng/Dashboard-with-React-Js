@@ -1,49 +1,60 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {ThemeProvider, createTheme , Grid} from "@material-ui/core";
-import TopBar from "./component/TopBar";
+import TopBar from "./layouts/TopBar";
 import Home from './pages/Home';
 import Courses from './pages/Courses';
+import Wallet from './pages/Wallet';
+import Withdraw from './pages/Withdraw';
 import Upload from './pages/Upload';
-import './styles/main.css';
-import {BrowserRouter as Router, Route, Switch, useRouteMatch} from "react-router-dom";
-import SideBar from "./component/SideBar";
-import './styles/main.css';
+import Board from './pages/Board';
+import './assets/globalStyles/styles/main.css';
+import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+import SideBar from "./layouts/SideBar";
+import './assets/globalStyles/styles/main.css';
 import Settings from "./pages/settings/Settings";
+import AuthContext from "./store/auth-context";
+import Auth from "./pages/Auth";
+import {theme , useStyle} from './assets/globalStyles/styles';
 
-const theme = createTheme({
-  palette:{
-    primary:{
-      darker:'#1C1C1F',
-      main:'#252529' ,
-      contrastText:"#ffffff",
-    },
-    secondary:{
-        main:'#04C9B7',
-        light:'#74849D'
-    }
-  }
-});
 function App() {
+    const authCtx = useContext(AuthContext);
+    const classes = useStyle();
   return (
     <ThemeProvider theme={theme}>
-      <React.Fragment>
           <Router>
-              <Grid container>
-                  <Grid item lg={1} md={1} sm={12} xs={12}>
-                      <SideBar/>
+              {authCtx.isLoggedIn && (
+                  <Grid container className={classes.wrapper}>
+                      <Grid item lg={1} md={1} sm={12} xs={12}>
+                          <SideBar/>
+                      </Grid>
+                     <Grid item lg={11} md={11} sm={12} xs={12} className='container'>
+                         <TopBar/>
+                         <Switch>
+                             <Route exact path="/home" ><Home/></Route>
+                             <Route exact path="/courses"><Courses/></Route>
+                             <Route exact path="/wallet"><Wallet/></Route>
+                             <Route exact path="/withdraw"><Withdraw/></Route>
+                             <Route exact path="/upload"><Upload/></Route>
+                             <Route exact path="/board"><Board/></Route>
+                             <Route exact path="/settings/:page?" render={props => <Settings {...props}/>}/>
+                             <Route exact path="/authForm"><Auth/></Route>
+                             <Route path="*">
+                                 <Redirect to="/home" />
+                             </Route>
+                         </Switch>
+                     </Grid>
                   </Grid>
-                 <Grid item lg={11} md={11} sm={12} xs={12} className='container'>
-                     <TopBar/>
-                     <Switch>
-                         <Route exact path="/" ><Home/></Route>
-                         <Route exact path="/courses" ><Courses/></Route>
-                         <Route exact path="/upload" ><Upload/></Route>
-                         <Route exact path="/settings/:page?" render={props => <Settings {...props}/>}/>
-                     </Switch>
-                 </Grid>
-              </Grid>
+              )
+              }
+                  <Switch>
+                      {!authCtx.isLoggedIn &&(
+                          <Route exact path="/">
+                              <Redirect to='/'/>
+                              <Auth/>
+                          </Route>
+                      )}
+                  </Switch>
           </Router>
-      </React.Fragment>
      </ThemeProvider>
   );
 }

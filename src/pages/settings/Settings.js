@@ -1,35 +1,15 @@
 import React, {useState} from 'react';
-import {Grid, Typography, Tab, Tabs, Box} from "@material-ui/core";
+import {Tab, Tabs, Box,Grid} from "@material-ui/core";
 import Profile from './Profile';
 import Application from "./Application";
 import PaymentMethod from "./PaymentMethod";
-import {makeStyles} from "@material-ui/styles";
-
-const useStyles = makeStyles(theme =>({
-    box:{
-        width:'300px'
-    },
-    tabs:{
-        '&.MuiTabs-root':{
-            position:'absolute',
-            top:'250px'
-        },
-        '& .MuiTab-wrapper':{
-            color:'#ffffff'
-        },
-        '& .MuiTab-root':{
-            backgroundColor:'#04C9B7',
-            margin:'.5rem',
-            borderRadius:'5px'
-        }
-    },
-}));
+import {settingsStyles} from "./styles";
 
 const Settings = (props) =>{
     const { match , history } = props;
     const { params } = match;
     const { page } = params;
-    const classes = useStyles();
+    const classes = settingsStyles();
     const indexToTabName = {
         profile:0,
         application:1,
@@ -48,6 +28,7 @@ const Settings = (props) =>{
     };
     return(
         <React.Fragment>
+            <Grid item>
             <Box className={classes.box}>
                 <Tabs
                     orientation="vertical"
@@ -65,6 +46,7 @@ const Settings = (props) =>{
             {selectedTab === 0 && <Profile />}
             {selectedTab === 1 && <Application />}
             {selectedTab === 2 && <PaymentMethod />}
+        </Grid>
         </React.Fragment>
     )
 }

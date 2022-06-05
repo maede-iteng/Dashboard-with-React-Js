@@ -2,21 +2,18 @@ import React from 'react';
 import {Grid, Typography} from "@material-ui/core";
 import {Link} from "react-router-dom";
 import ArrowForwardIosOutlinedIcon from "@material-ui/icons/ArrowForwardIosOutlined";
+import TitleOfPages from "../../component/TitleOfPages/TitleOfPages";
 
 const PaymentMethod = () =>{
     return(
         <React.Fragment>
-            <Grid container alignItems="center" className="home">
-                <Grid md={6} xs={12} item>
-                    <Typography variant="h4" className="primary__textColor">Payment Method</Typography>
-                    <Typography className="secondary-textColor">Welcome to Edunet Payment Method page</Typography>
-                </Grid>
-                <Grid md={6} xs={12} item className="primary__textColor link">
-                    <Link to="/settings">Settings</Link>
-                    <ArrowForwardIosOutlinedIcon fontSize="small"/>
-                    <Link to="/settings">Payment Method</Link>
-                </Grid>
-            </Grid>
+            <TitleOfPages title='Payment Method'
+                          welcomeMessage='Welcome to Edunet Payment Method page'
+                          prevPage='settings'
+                          currentPage='Payment Method'
+                          prevPageLink='/settings'
+                          currentPageLink='/settings'
+            />
         </React.Fragment>
     )
 }

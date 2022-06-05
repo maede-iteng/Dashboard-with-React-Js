@@ -1,0 +1,28 @@
+$background-color:#1C1C1F;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.container{
+  max-width:100%;
+  padding-right:3rem;
+  padding-left:3rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+a{
+  text-decoration: none;
+  color:unset;
+}
+li{
+  list-style: none;
+}
+svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+button{
+  all:unset;
+}
