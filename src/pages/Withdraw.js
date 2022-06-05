@@ -75,7 +75,7 @@ const Withdraw = () =>{
                     </Grid>
                 </Grid>
             </Grid>
-            <Box>
+            <Box className={classes.marginBottom}>
                 <Typography variant='h5'>Transaction</Typography>
                 <TableComponent data={withdrawTable}/>
             </Box>

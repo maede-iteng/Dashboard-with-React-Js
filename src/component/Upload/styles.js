@@ -5,7 +5,8 @@ export const uploadStyles = makeStyles(theme => ({
     formContainer:{
         backgroundColor:theme.palette.primary.main,
         borderRadius:'5px',
-        marginTop:'2rem'
+        marginTop:'2rem',
+        marginBottom:'5rem'
     },
     formWrapper:{
         width:'700px',

@@ -12,6 +12,7 @@ export const sidebarStyles = makeStyles((theme) =>({
         position:'fixed',
         top:'0',
         left:'0',
+        overflowY:'auto',
         ['@media (max-width:959px)']:{
             height: '50px',
             top:'auto',

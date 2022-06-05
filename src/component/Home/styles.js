@@ -65,7 +65,7 @@ export const firstWidgetStyles = makeStyles(theme =>({
         notificationSection:{
             marginTop: '1rem',
             transition: 'overflow linear .2s',
-            height:'300px',
+            height:'302px',
             overflow: 'hidden auto',
             '&::-webkit-scrollbar': {
                 width: '6px',
@@ -294,12 +294,10 @@ export const thirdWidgetStyles = makeStyles(theme =>({
             borderRadius:'5px',
             padding:'1.8rem',
             marginTop:'1rem',
+            marginBottom:'5rem',
             height:'400px',
             // height:'100%',
             position:'relative'
-        },
-        boxContainer:{
-            // height:'600px',
         },
         balance:{
             backgroundColor:theme.palette.primary.main,

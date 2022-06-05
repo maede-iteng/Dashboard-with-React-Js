@@ -1,4 +1,7 @@
 import React, { memo } from "react";
+import {makeStyles} from "@material-ui/styles";
+
+
 import {
     ZoomableGroup,
     ComposableMap,
@@ -18,21 +21,37 @@ const rounded = num => {
         return Math.round(num / 100) / 10 + "K";
     }
 };
-
+const useStyles = makeStyles(() =>({
+    map:{
+        width: "450px",
+        height: "100%",
+        overflow:"hidden",
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        ['@media (max-width:600px)']:{
+            width:'300px'
+        },
+    }
+}))
 const MapChart = ({ setTooltipContent }) => {
+    const classes = useStyles();
     return (
         <>
             <ComposableMap data-tip=""
                            projectionConfig={{ scale: 200 }}
-                           style={{
-                               width: "450px",
-                               height: "100%",
-                               overflow:"hidden",
-                               position: 'absolute',
-                               top: '50%',
-                               left: '50%',
-                               transform: 'translate(-50%, -50%)',
-                           }} >
+                           // style={{
+                           //     width: "450px",
+                           //     height: "100%",
+                           //     overflow:"hidden",
+                           //     position: 'absolute',
+                           //     top: '50%',
+                           //     left: '50%',
+                           //     transform: 'translate(-50%, -50%)',
+                           // }}
+                           className={classes.map}
+            >
                 <ZoomableGroup>
                     <Geographies geography={geoUrl}>
                         {({ geographies }) =>

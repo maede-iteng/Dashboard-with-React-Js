@@ -59,7 +59,7 @@ const Content = () =>{
                     })}
 
                 </Grid>
-                <Grid item xl={5} lg={4} md={12} sm={12} xs={12}>
+                <Grid item xl={5} lg={4} md={12} sm={12} xs={12} className={classes.marginBottom}>
                     <Typography variant='h5' className={classes.typography}>Group Discussions</Typography>
                             {groupDiscussions.map(item => {
                                 return (

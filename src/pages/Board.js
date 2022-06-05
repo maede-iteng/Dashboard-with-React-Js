@@ -8,7 +8,7 @@ import {Table,TableBody,TableHead,TableRow ,Paper} from '@material-ui/core';
 const Board = () =>{
     const classes = boardStyles();
     return(
-        <>
+        <React.Fragment>
             <TitleOfPages title='leader Board'
                           welcomeMessage='Welcome to Edunet leader Board page'
                           prevPage='Home'
@@ -16,7 +16,7 @@ const Board = () =>{
                           prevPageLink='/home'
                           currentPageLink='/board'
             />
-            <Box>
+            <Box className={classes.marginBottom}>
                 <StyledTableContainer component={Paper}>
                     <Table className={classes.table} aria-label="customized table">
                         <TableHead>
@@ -47,7 +47,7 @@ const Board = () =>{
                 </Table>
                 </StyledTableContainer>
             </Box>
-        </>
+        </React.Fragment>
     )
 }
 export default Board;

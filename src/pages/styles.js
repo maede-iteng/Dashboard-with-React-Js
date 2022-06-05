@@ -33,23 +33,8 @@ export const StyleTableCell = styled(TableCell)(({theme}) => ({
     }
 }));
 export const boardStyles = makeStyles(theme =>({
-    cartWrapper:{
-        backgroundColor: theme.palette.primary.main,
-        borderRadius:'5px',
-        padding:'1rem',
-        height:'240px'
-    },
-    typography:{
-        '&.whiteColor':{
-            color:theme.palette.primary.contrastText,
-        },
-        '&.grayColor':{
-            color:theme.palette.primary.grayText
-        }
-    },
-    simImage:{
-        height:'50px',
-        width:'100%',
+    marginBottom:{
+        marginBottom:'5rem'
     },
     courseLogo:{
         height:'60px'
@@ -86,14 +71,6 @@ export const walletStyles = makeStyles(theme=>({
             backgroundColor:"green"
         }
     },
-    // typography:{
-    //     '&.whiteColor':{
-    //         color:theme.palette.primary.contrastText,
-    //     },
-    //     '&.grayColor':{
-    //         color:theme.palette.primary.grayText
-    //     }
-    // },
     typeOfGroup:{
         backgroundColor:theme.palette.primary.main,
         marginTop:'1rem',
@@ -122,7 +99,7 @@ export const walletStyles = makeStyles(theme=>({
         backgroundColor:theme.palette.primary.main,
         padding:'1rem',
         borderRadius:'5px',
-
+        marginBottom:'5rem'
     },
     myBalanceData:{
         backgroundColor:'rgb(49,47,47)',
@@ -147,16 +124,11 @@ export const withdrawStyles = makeStyles(theme =>({
         marginTop:'1rem',
         marginBottom:'3rem',
     },
-    // typography:{
-    //     '&.whiteColor':{
-    //         color:theme.palette.primary.contrastText,
-    //     },
-    //     '&.grayColor':{
-    //         color:theme.palette.primary.grayText
-    //     }
-    // },
     simImage:{
         height:'50px',
         width:'100%',
     },
+    marginBottom:{
+        marginBottom:'5rem'
+    }
 }));

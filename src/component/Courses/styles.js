@@ -108,6 +108,9 @@ export const contentStyles = makeStyles(theme=>({
             backgroundColor:"green"
         }
     },
+    marginBottom:{
+      marginBottom:'5rem'
+    },
     typography:{
         color:theme.palette.primary.contrastText,
     },
