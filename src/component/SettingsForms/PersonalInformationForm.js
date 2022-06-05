@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Grid, MenuItem, Typography} from "@material-ui/core";
 import {useFormik} from "formik";
-import {validationPersonalInformationFormSchema} from '../../Utility/ValidationForms';
+import {validationPersonalInformationFormSchema} from '../../utility/ValidationForms';
 import {personalInformationStyles, CustomTextField} from "./styles";
 
 const PersonalInformationForm = () =>{

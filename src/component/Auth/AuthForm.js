@@ -5,7 +5,7 @@ import axios from 'axios';
 import AuthContext from "../../store/auth-context";
 import {useHistory} from "react-router-dom";
 import {CustomTextField, useStyles } from './styles';
-import {validationAuthFormSchema} from "../../Utility/ValidationForms";
+import {validationAuthFormSchema} from "../../utility/ValidationForms";
 
 const AuthForm = () => {
     const classes = useStyles();

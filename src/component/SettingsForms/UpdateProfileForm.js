@@ -2,7 +2,7 @@ import React from 'react';
 import {Button, Grid, Typography} from "@material-ui/core";
 import {useFormik} from "formik";
 import {updateProfileStyles, CustomTextField} from "./styles";
-import {validationUpdateProfileFormSchema} from '../../Utility/ValidationForms';
+import {validationUpdateProfileFormSchema} from '../../utility/ValidationForms';
 
 const UpdateProfileForm = () =>{
     const classes = updateProfileStyles();

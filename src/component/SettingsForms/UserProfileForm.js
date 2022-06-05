@@ -2,7 +2,7 @@ import React from 'react';
 import {Avatar, Button, Grid, TextField, Typography} from "@material-ui/core";
 import {useFormik} from "formik";
 import {userProfileStyles, CustomTextField} from "./styles";
-import {validationUserProfileFormSchema} from "../../Utility/ValidationForms";
+import {validationUserProfileFormSchema} from "../../utility/ValidationForms";
 
 const UserProfileForm = () =>{
     const classes = userProfileStyles();

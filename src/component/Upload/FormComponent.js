@@ -3,7 +3,7 @@ import { useFormik } from 'formik';
 import { Button, Box, Grid, MenuItem, Divider} from '@material-ui/core';
 import {coursesCategory} from "../../assets/dummyDate";
 import {uploadStyles , CustomTextField} from "./styles";
-import {validationFormComponentSchema} from "../../Utility/ValidationForms";
+import {validationFormComponentSchema} from "../../utility/ValidationForms";
 
 const FormComponent = () =>{
     const classes = uploadStyles();
