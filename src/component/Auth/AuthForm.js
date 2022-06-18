@@ -34,11 +34,6 @@ const AuthForm = () => {
                         identifier: values.email,
                         password: values.password,
                     })
-                    .then((response) => {
-                        // Handle success.
-                        // console.log('User profile', response.data.user);
-                        // console.log('User token', response.data.jwt);
-                    })
                     .catch((error) => {
                         // Handle error.
                         console.log('An error occurred:', error.response);
@@ -104,6 +99,7 @@ const AuthForm = () => {
                                      name="fullName"
                                      value={formik.values.fullName}
                                      onChange={formik.handleChange}
+                                     onBlur={formik.handleBlur}
                                      error={formik.touched.fullName && Boolean(formik.errors.fullName)}
                                      helperText={formik.touched.fullName && formik.errors.fullName}
                     />
@@ -115,6 +111,7 @@ const AuthForm = () => {
                                      name="email"
                                      value={formik.values.email}
                                      onChange={formik.handleChange}
+                                     onBlur={formik.handleBlur}
                                      error={formik.touched.email && Boolean(formik.errors.email)}
                                      helperText={formik.touched.email && formik.errors.email}
                     />
@@ -126,6 +123,7 @@ const AuthForm = () => {
                                      name="password"
                                      value={formik.values.password}
                                      onChange={formik.handleChange}
+                                     onBlur={formik.handleBlur}
                                      error={formik.touched.password && Boolean(formik.errors.password)}
                                      helperText={formik.touched.password && formik.errors.password}
                     />
