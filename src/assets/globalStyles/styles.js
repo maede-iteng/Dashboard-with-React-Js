@@ -41,9 +41,6 @@ export const theme = createTheme({
             color:'#a9a9a9',
         }
     },
-    // spacing:{
-    //     marginBottom:'5rem'
-    // }
 });
 
 export const useStyle = makeStyles(theme => ({

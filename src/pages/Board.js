@@ -31,7 +31,7 @@ const Board = () =>{
                         </TableHead>
                     <TableBody>
                         {board.map((row) => (
-                            <StyledTableRow key={row.description}>
+                            <StyledTableRow key={row.id}>
                                 <StyleTableCell scope="row">
                                     <img src={row.CourseLogo} alt="logo" className={classes.courseLogo}/>
                                     <Typography variant='subtitle1'>{row.CourseName}</Typography>

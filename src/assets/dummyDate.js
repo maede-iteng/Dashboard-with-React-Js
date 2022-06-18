@@ -237,6 +237,7 @@ export const withdrawTable = [
 
 export const board = [
   {
+    id:1,
     CourseLogo:'https://edunet.vercel.app/images/courses/bootstrap.png' ,
     CourseName:'Bootstrap Camp',
     Category:'Growing designing concept',
@@ -247,6 +248,7 @@ export const board = [
     Earning:'$31400'
   },
   {
+    id:2,
     CourseLogo:'https://edunet.vercel.app/images/courses/html5.png' ,
     CourseName:'Advanced Course of HTML5',
     Category:'Real use in real project',
@@ -257,6 +259,7 @@ export const board = [
     Earning:'$1965'
   },
   {
+    id:3,
     CourseLogo:'https://edunet.vercel.app/images/courses/jquery.png' ,
     CourseName:'Project Development using JQuery',
     Category:'Implementation of JQuery',
@@ -267,6 +270,7 @@ export const board = [
     Earning:'$4857'
   },
   {
+    id:4,
     CourseLogo:'https://edunet.vercel.app/images/courses/vue.png' ,
     CourseName:'Premium program of Vue',
     Category:'Advanced course',
@@ -277,6 +281,7 @@ export const board = [
     Earning:'$35280'
   },
   {
+    id:5,
     CourseLogo:'https://edunet.vercel.app/images/courses/sass.png' ,
     CourseName:'Project with SASS',
     Category:'sass instead of css',

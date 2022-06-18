@@ -23,31 +23,6 @@ const PersonalInformationForm = () =>{
         onSubmit: (values,{resetForm}) => {
             alert(JSON.stringify(values, null, 2));
             resetForm();
-            // {isLogin && (
-            // axios
-            //     .put('http://localhost:1337/users/10', {
-            //         username: values.fullName,
-            //         email: values.Email,
-            //         address:values.Address,
-            //         city:values.City,
-            //         postCode:values.PostCode,
-            //         country:values.Country
-            //
-            //     },
-            //     {
-            //         headers: {
-            //             Authorization: `Bearer ${authCtx.token}`,
-            //         }
-            //     })
-            //     .then(response => {
-            //         setIsLoading(false);
-            //         // console.log(response.data.username);
-            //         authCtx.login(response.data.jwt);
-            //     })
-            //     .catch(error => {
-            //         console.log('An error occurred:', error.response);
-            //     })
-            // )}
         },
     });
     return(
