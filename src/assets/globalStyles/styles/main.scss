@@ -1,9 +1,8 @@
-@import "config";
-body{
+@import 'config';
+body {
   background-color: $background-color;
-  font-family: 'Karla', sans-serif;;
+  font-family: 'Karla', sans-serif;
 }
-.margin__top{
+.margin__top {
   margin-top: 2rem;
 }
-
