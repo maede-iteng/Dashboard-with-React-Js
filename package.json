@@ -50,6 +50,7 @@
     ]
   },
   "devDependencies": {
-    "@faker-js/faker": "^6.0.0"
+    "@faker-js/faker": "^6.0.0",
+    "prettier": "2.7.1"
   }
 }
