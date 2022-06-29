@@ -116,6 +116,7 @@ const AuthForm = () => {
                                      helperText={formik.touched.email && formik.errors.email}
                     />
                     <CustomTextField variant="outlined"
+                                     type="password"
                                      fullWidth
                                      label="Enter Your Password"
                                      className={classes.inputTextColor}
